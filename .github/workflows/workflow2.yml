@@ -1,5 +1,6 @@
 name: Workflow2
-on: issue:
+on:
+  issues:
     types:
       - opened
 jobs:
