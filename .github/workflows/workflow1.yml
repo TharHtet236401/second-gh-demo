@@ -1,8 +1,15 @@
 name: workflow1
-on: 
+on:
   push:
-    branch:
+    branches:
       - main
+  pull_request:
+    branches:
+      - main
+      - 'dev-**'
+      - 'features/**'
+  paths-ignore:
+    - '.github/workflows/**'
 jobs:
   info:
     name: Get Code
